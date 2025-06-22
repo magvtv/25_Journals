@@ -73,6 +73,9 @@
       "assets": [
         "../assets"
       ],
+      "assets/*": [
+        "../assets/*"
+      ],
       "public": [
         "../public"
       ],
@@ -85,6 +88,9 @@
       "vue-demi": [
         "../node_modules/nuxt/dist/app/compat/vue-demi"
       ],
+      "pinia": [
+        "../node_modules/pinia/dist/pinia"
+      ],
       "#vue-router": [
         "../node_modules/vue-router"
       ],
@@ -95,7 +101,7 @@
         "./imports"
       ],
       "#app-manifest": [
-        "./manifest/meta/4cdb01a7-63b6-4a4e-b9c0-3e39bbeafec4"
+        "./manifest/meta/f1ba6d54-cc77-4c84-9dae-770c6636934b"
       ],
       "#components": [
         "./components"
@@ -139,6 +145,14 @@
     "../**/*",
     "../.config/nuxt.*",
     "./nuxt.d.ts",
+    "../node_modules/@nuxtjs/tailwindcss/runtime",
+    "../node_modules/@nuxtjs/tailwindcss/dist/runtime",
+    "../node_modules/@pinia/nuxt/runtime",
+    "../node_modules/@pinia/nuxt/dist/runtime",
+    "../node_modules/@vueuse/nuxt/runtime",
+    "../node_modules/@vueuse/nuxt/dist/runtime",
+    "../node_modules/@vite-pwa/nuxt/runtime",
+    "../node_modules/@vite-pwa/nuxt/dist/runtime",
     "../node_modules/@nuxt/devtools/runtime",
     "../node_modules/@nuxt/devtools/dist/runtime",
     "../node_modules/@nuxt/telemetry/runtime",
@@ -150,8 +164,20 @@
     "../.data",
     "../node_modules",
     "../node_modules/nuxt/node_modules",
+    "../node_modules/@nuxtjs/tailwindcss/node_modules",
+    "../node_modules/@pinia/nuxt/node_modules",
+    "../node_modules/@vueuse/nuxt/node_modules",
+    "../node_modules/@vite-pwa/nuxt/node_modules",
     "../node_modules/@nuxt/devtools/node_modules",
     "../node_modules/@nuxt/telemetry/node_modules",
+    "../node_modules/@nuxtjs/tailwindcss/runtime/server",
+    "../node_modules/@nuxtjs/tailwindcss/dist/runtime/server",
+    "../node_modules/@pinia/nuxt/runtime/server",
+    "../node_modules/@pinia/nuxt/dist/runtime/server",
+    "../node_modules/@vueuse/nuxt/runtime/server",
+    "../node_modules/@vueuse/nuxt/dist/runtime/server",
+    "../node_modules/@vite-pwa/nuxt/runtime/server",
+    "../node_modules/@vite-pwa/nuxt/dist/runtime/server",
     "../node_modules/@nuxt/devtools/runtime/server",
     "../node_modules/@nuxt/devtools/dist/runtime/server",
     "../node_modules/@nuxt/telemetry/runtime/server",

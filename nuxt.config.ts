@@ -3,7 +3,8 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
     '@pinia/nuxt',
-    '@vueuse/nuxt'
+    '@vueuse/nuxt',
+    '@vite-pwa/nuxt'
   ],
   css: ['~/assets/css/main.css'],
   app: {
@@ -26,6 +27,39 @@ export default defineNuxtConfig({
         { 
           href: 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap', 
           rel: 'stylesheet' 
+        }
+      ]
+    }
+  },
+  pwa: {
+    registerType: 'autoUpdate',
+    workbox: {
+      navigateFallback: '/',
+      globPatterns: ['**/*.{js,css,html,png,svg,ico}']
+    },
+    client: {
+      installPrompt: true
+    },
+    manifest: {
+      name: 'Book Journal Studio',
+      short_name: 'Journal Studio',
+      description: 'Extension of your mind - Premium journals for thinkers, planners, and creators',
+      theme_color: '#1f2937',
+      background_color: '#faf7f0',
+      display: 'standalone',
+      orientation: 'portrait',
+      scope: '/',
+      start_url: '/',
+      icons: [
+        {
+          src: 'icon-192x192.png',
+          sizes: '192x192',
+          type: 'image/png'
+        },
+        {
+          src: 'icon-512x512.png',
+          sizes: '512x512',
+          type: 'image/png'
         }
       ]
     }

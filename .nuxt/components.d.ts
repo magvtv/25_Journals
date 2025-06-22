@@ -12,7 +12,19 @@ type HydrationStrategies = {
 }
 type LazyComponent<T> = (T & DefineComponent<HydrationStrategies, {}, {}, {}, {}, {}, {}, { hydrated: () => void }>)
 interface _GlobalComponents {
-      'NuxtWelcome': typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']
+      'AppFooter': typeof import("../components/AppFooter.vue")['default']
+    'AppHeader': typeof import("../components/AppHeader.vue")['default']
+    'BestSellersSection': typeof import("../components/BestSellersSection.vue")['default']
+    'ExperienceSection': typeof import("../components/ExperienceSection.vue")['default']
+    'FindYourFavoriteSection': typeof import("../components/FindYourFavoriteSection.vue")['default']
+    'HeroSection': typeof import("../components/HeroSection.vue")['default']
+    'InkLinkSection': typeof import("../components/InkLinkSection.vue")['default']
+    'JournalCard': typeof import("../components/JournalCard.vue")['default']
+    'JournalModal': typeof import("../components/JournalModal.vue")['default']
+    'MobileMenu': typeof import("../components/MobileMenu.vue")['default']
+    'OtherJournalsSection': typeof import("../components/OtherJournalsSection.vue")['default']
+    'TestimonialsSection': typeof import("../components/TestimonialsSection.vue")['default']
+    'NuxtWelcome': typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']
     'NuxtLayout': typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']
     'NuxtErrorBoundary': typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary.vue")['default']
     'ClientOnly': typeof import("../node_modules/nuxt/dist/app/components/client-only")['default']
@@ -24,7 +36,9 @@ interface _GlobalComponents {
     'NuxtRouteAnnouncer': typeof import("../node_modules/nuxt/dist/app/components/nuxt-route-announcer")['default']
     'NuxtImg': typeof import("../node_modules/nuxt/dist/app/components/nuxt-stubs")['NuxtImg']
     'NuxtPicture': typeof import("../node_modules/nuxt/dist/app/components/nuxt-stubs")['NuxtPicture']
-    'NuxtPage': typeof import("../node_modules/nuxt/dist/pages/runtime/page-placeholder")['default']
+    'VitePwaManifest': typeof import("../node_modules/@vite-pwa/nuxt/dist/runtime/components/VitePwaManifest")['default']
+    'NuxtPwaManifest': typeof import("../node_modules/@vite-pwa/nuxt/dist/runtime/components/VitePwaManifest")['default']
+    'NuxtPage': typeof import("../node_modules/nuxt/dist/pages/runtime/page")['default']
     'NoScript': typeof import("../node_modules/nuxt/dist/head/runtime/components")['NoScript']
     'Link': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Link']
     'Base': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Base']
@@ -36,7 +50,19 @@ interface _GlobalComponents {
     'Body': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
     'NuxtIsland': typeof import("../node_modules/nuxt/dist/app/components/nuxt-island")['default']
     'NuxtRouteAnnouncer': IslandComponent<typeof import("../node_modules/nuxt/dist/app/components/server-placeholder")['default']>
-      'LazyNuxtWelcome': LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']>
+      'LazyAppFooter': LazyComponent<typeof import("../components/AppFooter.vue")['default']>
+    'LazyAppHeader': LazyComponent<typeof import("../components/AppHeader.vue")['default']>
+    'LazyBestSellersSection': LazyComponent<typeof import("../components/BestSellersSection.vue")['default']>
+    'LazyExperienceSection': LazyComponent<typeof import("../components/ExperienceSection.vue")['default']>
+    'LazyFindYourFavoriteSection': LazyComponent<typeof import("../components/FindYourFavoriteSection.vue")['default']>
+    'LazyHeroSection': LazyComponent<typeof import("../components/HeroSection.vue")['default']>
+    'LazyInkLinkSection': LazyComponent<typeof import("../components/InkLinkSection.vue")['default']>
+    'LazyJournalCard': LazyComponent<typeof import("../components/JournalCard.vue")['default']>
+    'LazyJournalModal': LazyComponent<typeof import("../components/JournalModal.vue")['default']>
+    'LazyMobileMenu': LazyComponent<typeof import("../components/MobileMenu.vue")['default']>
+    'LazyOtherJournalsSection': LazyComponent<typeof import("../components/OtherJournalsSection.vue")['default']>
+    'LazyTestimonialsSection': LazyComponent<typeof import("../components/TestimonialsSection.vue")['default']>
+    'LazyNuxtWelcome': LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']>
     'LazyNuxtLayout': LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']>
     'LazyNuxtErrorBoundary': LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary.vue")['default']>
     'LazyClientOnly': LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/client-only")['default']>
@@ -48,7 +74,9 @@ interface _GlobalComponents {
     'LazyNuxtRouteAnnouncer': LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-route-announcer")['default']>
     'LazyNuxtImg': LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-stubs")['NuxtImg']>
     'LazyNuxtPicture': LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-stubs")['NuxtPicture']>
-    'LazyNuxtPage': LazyComponent<typeof import("../node_modules/nuxt/dist/pages/runtime/page-placeholder")['default']>
+    'LazyVitePwaManifest': LazyComponent<typeof import("../node_modules/@vite-pwa/nuxt/dist/runtime/components/VitePwaManifest")['default']>
+    'LazyNuxtPwaManifest': LazyComponent<typeof import("../node_modules/@vite-pwa/nuxt/dist/runtime/components/VitePwaManifest")['default']>
+    'LazyNuxtPage': LazyComponent<typeof import("../node_modules/nuxt/dist/pages/runtime/page")['default']>
     'LazyNoScript': LazyComponent<typeof import("../node_modules/nuxt/dist/head/runtime/components")['NoScript']>
     'LazyLink': LazyComponent<typeof import("../node_modules/nuxt/dist/head/runtime/components")['Link']>
     'LazyBase': LazyComponent<typeof import("../node_modules/nuxt/dist/head/runtime/components")['Base']>
@@ -66,6 +94,18 @@ declare module 'vue' {
   export interface GlobalComponents extends _GlobalComponents { }
 }
 
+export const AppFooter: typeof import("../components/AppFooter.vue")['default']
+export const AppHeader: typeof import("../components/AppHeader.vue")['default']
+export const BestSellersSection: typeof import("../components/BestSellersSection.vue")['default']
+export const ExperienceSection: typeof import("../components/ExperienceSection.vue")['default']
+export const FindYourFavoriteSection: typeof import("../components/FindYourFavoriteSection.vue")['default']
+export const HeroSection: typeof import("../components/HeroSection.vue")['default']
+export const InkLinkSection: typeof import("../components/InkLinkSection.vue")['default']
+export const JournalCard: typeof import("../components/JournalCard.vue")['default']
+export const JournalModal: typeof import("../components/JournalModal.vue")['default']
+export const MobileMenu: typeof import("../components/MobileMenu.vue")['default']
+export const OtherJournalsSection: typeof import("../components/OtherJournalsSection.vue")['default']
+export const TestimonialsSection: typeof import("../components/TestimonialsSection.vue")['default']
 export const NuxtWelcome: typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']
 export const NuxtLayout: typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']
 export const NuxtErrorBoundary: typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary.vue")['default']
@@ -78,7 +118,9 @@ export const NuxtTime: typeof import("../node_modules/nuxt/dist/app/components/n
 export const NuxtRouteAnnouncer: typeof import("../node_modules/nuxt/dist/app/components/nuxt-route-announcer")['default']
 export const NuxtImg: typeof import("../node_modules/nuxt/dist/app/components/nuxt-stubs")['NuxtImg']
 export const NuxtPicture: typeof import("../node_modules/nuxt/dist/app/components/nuxt-stubs")['NuxtPicture']
-export const NuxtPage: typeof import("../node_modules/nuxt/dist/pages/runtime/page-placeholder")['default']
+export const VitePwaManifest: typeof import("../node_modules/@vite-pwa/nuxt/dist/runtime/components/VitePwaManifest")['default']
+export const NuxtPwaManifest: typeof import("../node_modules/@vite-pwa/nuxt/dist/runtime/components/VitePwaManifest")['default']
+export const NuxtPage: typeof import("../node_modules/nuxt/dist/pages/runtime/page")['default']
 export const NoScript: typeof import("../node_modules/nuxt/dist/head/runtime/components")['NoScript']
 export const Link: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Link']
 export const Base: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Base']
@@ -90,6 +132,18 @@ export const Html: typeof import("../node_modules/nuxt/dist/head/runtime/compone
 export const Body: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
 export const NuxtIsland: typeof import("../node_modules/nuxt/dist/app/components/nuxt-island")['default']
 export const NuxtRouteAnnouncer: IslandComponent<typeof import("../node_modules/nuxt/dist/app/components/server-placeholder")['default']>
+export const LazyAppFooter: LazyComponent<typeof import("../components/AppFooter.vue")['default']>
+export const LazyAppHeader: LazyComponent<typeof import("../components/AppHeader.vue")['default']>
+export const LazyBestSellersSection: LazyComponent<typeof import("../components/BestSellersSection.vue")['default']>
+export const LazyExperienceSection: LazyComponent<typeof import("../components/ExperienceSection.vue")['default']>
+export const LazyFindYourFavoriteSection: LazyComponent<typeof import("../components/FindYourFavoriteSection.vue")['default']>
+export const LazyHeroSection: LazyComponent<typeof import("../components/HeroSection.vue")['default']>
+export const LazyInkLinkSection: LazyComponent<typeof import("../components/InkLinkSection.vue")['default']>
+export const LazyJournalCard: LazyComponent<typeof import("../components/JournalCard.vue")['default']>
+export const LazyJournalModal: LazyComponent<typeof import("../components/JournalModal.vue")['default']>
+export const LazyMobileMenu: LazyComponent<typeof import("../components/MobileMenu.vue")['default']>
+export const LazyOtherJournalsSection: LazyComponent<typeof import("../components/OtherJournalsSection.vue")['default']>
+export const LazyTestimonialsSection: LazyComponent<typeof import("../components/TestimonialsSection.vue")['default']>
 export const LazyNuxtWelcome: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']>
 export const LazyNuxtLayout: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']>
 export const LazyNuxtErrorBoundary: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary.vue")['default']>
@@ -102,7 +156,9 @@ export const LazyNuxtTime: LazyComponent<typeof import("../node_modules/nuxt/dis
 export const LazyNuxtRouteAnnouncer: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-route-announcer")['default']>
 export const LazyNuxtImg: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-stubs")['NuxtImg']>
 export const LazyNuxtPicture: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-stubs")['NuxtPicture']>
-export const LazyNuxtPage: LazyComponent<typeof import("../node_modules/nuxt/dist/pages/runtime/page-placeholder")['default']>
+export const LazyVitePwaManifest: LazyComponent<typeof import("../node_modules/@vite-pwa/nuxt/dist/runtime/components/VitePwaManifest")['default']>
+export const LazyNuxtPwaManifest: LazyComponent<typeof import("../node_modules/@vite-pwa/nuxt/dist/runtime/components/VitePwaManifest")['default']>
+export const LazyNuxtPage: LazyComponent<typeof import("../node_modules/nuxt/dist/pages/runtime/page")['default']>
 export const LazyNoScript: LazyComponent<typeof import("../node_modules/nuxt/dist/head/runtime/components")['NoScript']>
 export const LazyLink: LazyComponent<typeof import("../node_modules/nuxt/dist/head/runtime/components")['Link']>
 export const LazyBase: LazyComponent<typeof import("../node_modules/nuxt/dist/head/runtime/components")['Base']>
