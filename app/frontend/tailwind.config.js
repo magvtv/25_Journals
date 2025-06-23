@@ -14,10 +14,11 @@ module.exports = {
     ],
     theme: {
       extend: {
-        fontFamily: {
-          'sans': ['Inter', 'system-ui', 'sans-serif'],
-          'serif': ['Playfair Display', 'Georgia', 'serif'],
-        },
+              fontFamily: {
+        'sans': ['Inter', 'system-ui', 'sans-serif'],
+        'serif': ['Playfair Display', 'Georgia', 'serif'],
+        'marker': ['LXGW Marker Gothic', 'sans-serif'],
+      },
         colors: {
           primary: {
             50: '#f0f9ff',

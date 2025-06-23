@@ -9,7 +9,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <!-- Content -->
           <div class="text-center lg:text-left animate-slide-up">
-            <h1 class="text-4xl md:text-6xl font-serif font-bold text-journal-charcoal mb-6 leading-tight">
+            <h1 class="text-4xl md:text-6xl font-serif font-bold text-journal-charcoal mt-6 mb-3 leading-tight">
               Not just a book.<br>
               <span class="text-gradient">It's an extension</span><br>
               of your mind.

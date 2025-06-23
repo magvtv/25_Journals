@@ -2,7 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom CSS Classes */
+/* 🎨 FONT CUSTOMIZATION SYSTEM
+   Change fonts easily by updating CSS custom properties
+   Default: LXGW Marker Gothic for aesthetic testing
+*/
+@layer base {
+  :root {
+    /* 📝 Primary Font - Main content font */
+    --font-primary: "LXGW Marker Gothic", sans-serif;
+    
+    /* 🎭 Display Font - Headings and special text */
+    --font-display: "LXGW Marker Gothic", sans-serif;
+    
+    /* 💼 Body Font - Regular text content */
+    --font-body: "LXGW Marker Gothic", sans-serif;
+    
+    /* 🏷️ UI Font - Buttons, labels, UI elements */
+    --font-ui: "LXGW Marker Gothic", sans-serif;
+  }
+
+  html {
+    font-family: var(--font-primary);
+  }
+  
+  body {
+    @apply bg-journal-cream text-journal-charcoal;
+    font-family: var(--font-body);
+  }
+
+  /* Apply custom fonts to different elements */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+
+  .font-primary { font-family: var(--font-primary); }
+  .font-display { font-family: var(--font-display); }
+  .font-body { font-family: var(--font-body); }
+  .font-ui { font-family: var(--font-ui); }
+
+  /* 🎨 Official Google Fonts CSS Class */
+  .lxgw-marker-gothic-regular {
+    font-family: "LXGW Marker Gothic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+}
+
 @layer components {
   /* Container */
   .container-custom {
@@ -17,12 +62,21 @@
   /* Buttons */
   .btn-primary {
     @apply bg-journal-gold hover:bg-yellow-500 text-journal-charcoal font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl;
+    font-family: var(--font-ui);
   }
 
   .btn-secondary {
     @apply bg-transparent border-2 border-journal-charcoal hover:bg-journal-charcoal hover:text-white text-journal-charcoal font-semibold py-3 px-6 rounded-lg transition-all duration-300;
+    font-family: var(--font-ui);
   }
 
+  /* Journal Card */
+  .journal-card {
+    @apply bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden;
+  }
+}
+
+@layer utilities {
   /* Text Gradients */
   .text-gradient {
     @apply bg-gradient-to-r from-journal-gold to-yellow-400 bg-clip-text text-transparent;
@@ -30,12 +84,7 @@
 
   /* Glass Effect */
   .glass-effect {
-    @apply bg-white/10 backdrop-blur-sm border border-white/20;
-  }
-
-  /* Journal Card */
-  .journal-card {
-    @apply bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1;
+    @apply bg-white/80 backdrop-blur-sm border border-white/20;
   }
 }
 
@@ -48,48 +97,26 @@
   background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@layer base {
-  html {
-    font-family: 'Inter', system-ui, sans-serif;
-  }
-  
-  body {
-    @apply bg-journal-cream text-journal-charcoal;
-  }
+/* 🎨 QUICK FONT SWITCHER CLASSES
+   Use these classes to quickly test different fonts
+*/
+.test-inter {
+  --font-primary: 'Inter', system-ui, sans-serif;
+  --font-display: 'Inter', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-ui: 'Inter', system-ui, sans-serif;
 }
 
-@layer components {
-  .btn-primary {
-    @apply bg-primary-600 hover:bg-primary-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5;
-  }
-  
-  .btn-secondary {
-    @apply bg-journal-cream border-2 border-journal-charcoal text-journal-charcoal hover:bg-journal-charcoal hover:text-journal-cream font-medium py-3 px-6 rounded-lg transition-all duration-200;
-  }
-  
-  .journal-card {
-    @apply bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden;
-  }
-  
-  .section-padding {
-    @apply px-4 sm:px-6 lg:px-8 py-12 lg:py-20;
-  }
-  
-  .container-custom {
-    @apply max-w-7xl mx-auto;
-  }
+.test-playfair {
+  --font-primary: 'Playfair Display', Georgia, serif;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Playfair Display', Georgia, serif;
+  --font-ui: 'Playfair Display', Georgia, serif;
 }
 
-@layer utilities {
-  .text-gradient {
-    @apply bg-gradient-to-r from-primary-600 to-primary-800 bg-clip-text text-transparent;
-  }
-  
-  .glass-effect {
-    @apply bg-white/80 backdrop-blur-sm border border-white/20;
-  }
+.test-marker {
+  --font-primary: 'LXGW Marker Gothic', 'Inter', system-ui, sans-serif;
+  --font-display: 'LXGW Marker Gothic', 'Inter', system-ui, sans-serif;
+  --font-body: 'LXGW Marker Gothic', 'Inter', system-ui, sans-serif;
+  --font-ui: 'LXGW Marker Gothic', 'Inter', system-ui, sans-serif;
 }
